@@ -20,7 +20,7 @@ load_dotenv()
 # Initialize Gemini API
 try:
     # Try to load from environment variable first
-    api_key = os.getenv("GEMINI_API_KEY", "AIzaSyDQM4n9Sm18uRqHciBxPPP6knFz09pLf_I")
+    api_key = os.getenv("GEMINI_API_KEY")
     genai.configure(api_key=api_key)
     model = genai.GenerativeModel('gemini-2.0-flash')
 except Exception as e:
